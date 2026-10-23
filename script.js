@@ -49,9 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
     sections.forEach((sec) => {
       if (probe >= sec.offsetTop) current = sec.id;
     });
-    // Skills sits inside the About section; keep "Skills" highlighted when reached
-    const skills = document.getElementById("skills");
-    if (skills && probe >= skills.offsetTop && current === "about") current = "skills";
 
     navLinks.forEach((l) => {
       l.classList.toggle("active", l.getAttribute("href") === "#" + current);
